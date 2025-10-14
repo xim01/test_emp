@@ -1,0 +1,27 @@
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 61px;
+}
+
+.link {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+  font-weight: 400;
+  font-size: 13px;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+}
+
+.link:hover {
+  color: #444;
+}
+
+.active {
+  color: #3e9cdc;
+}
