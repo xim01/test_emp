@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, ChangeEvent, MouseEvent, FC } from "react";
 import BuyText from "./components/BuyText";
 import BuySteps from "./components/BuySteps";
 
@@ -12,26 +12,41 @@ const fileSvg = (
   </svg>
 );
 
-export default function Buy() {
-  const [percent, setPercent] = useState(86);
-  const [fileName, setFileName] = useState("");
-  const [selectOpen, setSelectOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState("Выберите тип системы");
+const Buy: FC = () => {
+  const [percent, setPercent] = useState<number>(86);
+  const [fileName, setFileName] = useState<string>("");
+  const [selectOpen, setSelectOpen] = useState<boolean>(false);
+  const [selectedOption, setSelectedOption] = useState<string>("Выберите тип системы");
 
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
+  const handleFileChange = (e: ChangeEvent<HTMLInputElement>): void => {
+    const file = e.target.files?.[0];
     if (file) setFileName(file.name);
     else setFileName("");
   };
 
-  const options = ["CRM система", "Сайт-визитка", "Интернет-магазин", "Мобильное приложение", "Корпоративный портал"];
+  const handlePercentChange = (e: ChangeEvent<HTMLInputElement>): void => {
+    setPercent(Number(e.target.value));
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
+    e.preventDefault();
+    alert("Отправлено");
+  };
+
+  const options: string[] = [
+    "CRM система",
+    "Сайт-визитка",
+    "Интернет-магазин",
+    "Мобильное приложение",
+    "Корпоративный портал",
+  ];
 
   return (
     <div id="buy">
       <BuyText />
       <BuySteps />
       <div id="buy_content">
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="form-row-1">
             {/* Кастомный select */}
             <div className="custom-select">
@@ -65,16 +80,10 @@ export default function Buy() {
             <div className="slider-row">
               <div className="slider-text-wrapper">
                 <div className="slider-text">Sed ut perspiciatis, unde omnis iste natus</div>
-                <div id="percentValue">{percent}%</div>{" "}
+                <div id="percentValue">{percent}%</div>
               </div>
-              <input
-                type="range"
-                min="0"
-                max="100"
-                value={percent}
-                onChange={(e) => setPercent(e.target.value)}
-                id="percentRange"
-              />
+
+              <input type="range" min="0" max="100" value={percent} onChange={handlePercentChange} id="percentRange" />
             </div>
 
             <div className="file-row">
@@ -89,7 +98,7 @@ export default function Buy() {
 
           <div className="file-row-center-1">
             <div className="from-button-wrapper">
-              <button className="blue_button" onClick={() => alert("Отправлено")} type="submit">
+              <button className="blue_button" type="submit">
                 ОТПРАВИТЬ
               </button>
             </div>
@@ -98,4 +107,6 @@ export default function Buy() {
       </div>
     </div>
   );
-}
+};
+
+export default Buy;

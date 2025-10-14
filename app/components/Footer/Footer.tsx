@@ -1,5 +1,5 @@
-import WalletItems from "./components/WalletItems";
 import ContactsItems from "./components/ContactsItems";
+import WalletItems from "./components/WalletItems";
 
 export default function Footer() {
   return (

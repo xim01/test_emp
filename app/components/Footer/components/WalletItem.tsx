@@ -1,4 +1,11 @@
-export default function WalletItem({ text, icon }) {
+import React, { FC, ReactNode } from "react";
+
+interface WalletItemProps {
+  text: string;
+  icon: ReactNode; // может быть SVG, компонент, строка, иконка и т.п.
+}
+
+const WalletItem: FC<WalletItemProps> = ({ text, icon }) => {
   return (
     <div className="wallets_item">
       <div className="wallets_item_icon">
@@ -9,4 +16,6 @@ export default function WalletItem({ text, icon }) {
       </div>
     </div>
   );
-}
+};
+
+export default WalletItem;

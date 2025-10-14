@@ -1,5 +1,3 @@
-import { FaSearch, FaMoneyBillAlt, FaFileAlt, FaPercentage, FaRegComment } from "react-icons/fa"; // импортируем иконку лупы
-
 const fileSvg = (
   <svg width="39" height="42" viewBox="0 0 39 42" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
@@ -59,21 +57,45 @@ const moneySvg = (
   </svg>
 );
 
-export default function Step({ type = "buy_step_default", text, icon }) {
+import React, { FC } from "react";
+import { ReactNode } from "react";
+
+type StepIconType = "search" | "money" | "file" | "percent" | "message";
+
+interface StepProps {
+  type?: string; // по умолчанию "buy_step_default"
+  text: string;
+  icon: StepIconType;
+}
+
+const Step: FC<StepProps> = ({ type = "buy_step_default", text, icon }) => {
   const dotsCount = 5; // одинаково слева и справа
+
+  const renderIcon = () => {
+    switch (icon) {
+      case "search":
+        return searchSvg;
+      case "money":
+        return moneySvg;
+      case "file":
+        return fileSvg;
+      case "percent":
+        return percentSvg;
+      case "message":
+        return messageSvg;
+      default:
+        return null;
+    }
+  };
 
   return (
     <div className={type}>
       <div className="buy_step_element_wrapper">
-        <div className="buy_step_element_circle">
-          {icon === "search" && searchSvg}
-          {icon === "money" && moneySvg}
-          {icon === "file" && fileSvg}
-          {icon === "percent" && percentSvg}
-          {icon === "message" && messageSvg}
-        </div>
+        <div className="buy_step_element_circle">{renderIcon()}</div>
       </div>
       <div className="buy_step_text">{text}</div>
     </div>
   );
-}
+};
+
+export default Step;
