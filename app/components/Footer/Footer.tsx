@@ -1,16 +1,12 @@
-import ContactsItems from "./components/ContactsItems";
-import WalletItems from "./components/WalletItems";
+import Contacts from "./components/Contacts/Contacts";
+import Wallet from "./components/Wallet/Wallet";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer id="footer">
       <div className="copyright footer_item">© 2018 «LoremIpsum.net» Все права защищены.</div>
-      <div className="wallets footer_item">
-        <WalletItems />
-      </div>
-      <div className="contacts footer_item">
-        <ContactsItems />
-      </div>
+      <Wallet />
+      <Contacts />
     </footer>
   );
 }

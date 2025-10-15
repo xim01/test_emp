@@ -106,7 +106,7 @@ main {
 /*background: #3E9CDC;*/
 /*RESETS*/
 /*FONTS*/
-span.blue {
+.blue_text {
   color: #3e9cdc;
 }
 h1 {
@@ -158,7 +158,7 @@ header {
   height: 850px;
   margin: 0 auto;
 }
-#nav_wrapper {
+#header_menu {
   background: rgba(16, 16, 29, 0.898);
   flex-wrap: wrap;
   justify-content: space-between;
@@ -172,17 +172,17 @@ header {
   position: relative;
   left: 375px;
 }
-.menu {
+.nav_wrapper {
   position: relative;
   top: 1px;
   right: 376px;
 }
-.slider_inner_text {
+.header_slider_content {
   width: 800px;
   padding-top: 56px;
   padding-left: 375px;
 }
-.slider_inner_text_title {
+.header_slider_content_title {
   font-size: 48px;
   font-weight: 700;
   font-family: var(--font-lato), sans-serif;
@@ -190,14 +190,14 @@ header {
   color: #000;
   line-height: 1.17;
 }
-.slider_inner_text_body {
+.header_slider_content_body {
   font-size: 22px;
   font-family: var(--font-lato), sans-serif;
   color: #000;
   position: relative;
   top: 43px;
 }
-.slider_inner_text_body ul {
+.header_slider_content_body ul {
   margin: 0;
   margin-top: 0px;
   margin-left: 0px;
@@ -206,11 +206,11 @@ header {
   margin-left: 13px;
   line-height: 1.3;
 }
-.slider_inner_text_body ul li {
+.header_slider_content_body ul li {
   position: relative; /* чтобы ::before позиционировался относительно li */
   padding-left: 11px; /* отступ для дефиса */
 }
-.slider_inner_text_body ul li::before {
+.header_slider_content_body ul li::before {
   content: "–"; /* дефис */
   position: absolute;
   left: 0;
@@ -223,12 +223,12 @@ header {
 .b {
   font-weight: 700;
 }
-.slider_inner_buttons {
+.header_slider_content_buttons {
   gap: 30px;
   margin-top: 120px;
   display: flex;
 }
-.slider_inner_buttons button {
+.header_slider_content_buttons button {
   text-transform: uppercase;
   font-family: var(--font-lato), sans-serif;
   border-radius: 3px;
@@ -236,18 +236,17 @@ header {
   font-size: 13px;
   font-weight: 400;
 }
-.slider_inner_buttons button.white {
+.white_btn {
   background-color: #fff;
   color: #000;
   border: 1px solid #6f6d7b;
   padding: 13px 51px;
 }
-.slider_inner_buttons button.blue {
+.blue_btn {
   background: #3e9cdc;
   color: #fff;
   border: 1px solid #fff;
 }
-
 main {
   width: 100%;
   max-width: 1920px;
@@ -353,23 +352,23 @@ main::before {
   margin-left: 5px;
   margin-right: 5px;
 }
-.file-row {
+.file_row {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
   margin-bottom: 25px;
 }
-.file-row label {
+.file_row label {
   display: flex;
 }
-.from-button-wrapper {
+.buy_form_button_wrapper {
   width: 374px;
   margin: 0 auto;
   padding-right: 0;
   padding-top: 7px;
 }
-.file-label {
+.file_label {
   color: #272733;
   cursor: pointer;
   background: rgba(255, 255, 255, 0.85);
@@ -389,24 +388,24 @@ main::before {
   margin-top: 4px;
   font-size: 16px;
 }
-.file-label-icon {
+.file_label_icon {
   margin-right: 9px;
 }
-.file-label:hover {
+.file_label:hover {
   background: #378fe6;
 }
 
-.file-name {
+.file_name {
   color: #272733;
   font-size: 14px;
   font-style: italic;
 }
-#buy_content {
+#buy_form_wrapper {
   padding-top: 85px;
 }
-#buy_content select,
-#buy_content input[type="text"],
-#buy_content input[type="email"] {
+#buy_form_wrapper select,
+#buy_form_wrapper input[type="text"],
+#buy_form_wrapper input[type="email"] {
   width: 372px;
   height: 48px;
   border-radius: 3px;
@@ -424,15 +423,15 @@ main::before {
   -moz-appearance: none;
   color: #272733;
 }
-#buy_content input::placeholder {
+#buy_form_wrapper input::placeholder {
   color: #272733;
   opacity: 1;
 }
-#buy_content input[type="range"] {
+#buy_form_wrapper input[type="range"] {
   width: 100%;
 }
-.form-row-1,
-.form-row-2 {
+.buy_form_row,
+.buy_form_row_2 {
   gap: 29px;
   display: flex;
   margin-bottom: 26px;
@@ -589,7 +588,7 @@ select::-webkit-scrollbar-thumb:hover {
   background-color: #378fe6;
 }
 /* ===== Кастомный SELECT ===== */
-.custom-select {
+.select {
   position: relative;
   width: 370px;
   font-family: var(--font-lato), sans-serif;
@@ -598,7 +597,7 @@ select::-webkit-scrollbar-thumb:hover {
   height: 48px;
 }
 
-.select-header {
+.select_header {
   cursor: pointer;
   color: #272733;
   background-color: rgba(255, 255, 255, 0.85);
@@ -614,11 +613,11 @@ select::-webkit-scrollbar-thumb:hover {
   position: relative;
 }
 
-.select-header:hover {
+.select_header:hover {
   border-color: #4ea3ff;
 }
 
-.arrow {
+.select_arrow {
   position: absolute;
   right: 15px;
   top: 50%;
@@ -630,12 +629,12 @@ select::-webkit-scrollbar-thumb:hover {
   transition: transform 0.3s ease;
 }
 
-.select-header.open .arrow {
+.select_header.open .select_arrow {
   transform: translateY(-50%) rotate(-135deg);
 }
 
 /* выпадающее меню */
-.select-options {
+.select_options {
   position: absolute;
   top: calc(100% + 4px);
   left: 0;
@@ -651,24 +650,24 @@ select::-webkit-scrollbar-thumb:hover {
 }
 
 /* стили скроллбара */
-.select-options::-webkit-scrollbar {
+.select_options::-webkit-scrollbar {
   width: 8px;
 }
-.select-options::-webkit-scrollbar-thumb {
+.select_options::-webkit-scrollbar-thumb {
   background: #4ea3ff;
   border-radius: 4px;
 }
-.select-options::-webkit-scrollbar-thumb:hover {
+.select_options::-webkit-scrollbar-thumb:hover {
   background: #3791e6;
 }
 
 /* стили опций */
-.select-options li {
+.select_options li {
   padding: 10px 15px;
   cursor: pointer;
   transition: background 0.2s;
 }
-.select-options li:hover {
+.select_options li:hover {
   background-color: #4ea3ff33;
 }
 .blue_button {
@@ -748,7 +747,7 @@ footer div:last-of-type {
   border-right: none;
 }
 
-.slider_inner_buttons button:hover,
+.header_slider_content_buttons button:hover,
 button:hover {
   transition: all 0.2s;
   background-color: #444;

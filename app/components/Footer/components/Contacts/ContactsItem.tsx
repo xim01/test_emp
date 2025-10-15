@@ -2,8 +2,8 @@ import React, { FC, ReactNode } from "react";
 
 interface ContactsItemProps {
   text: string;
-  icon: ReactNode; // позволяет передавать любой JSX (svg, иконку, компонент)
-  classTag?: string; // необязательный пропс
+  icon: ReactNode;
+  classTag?: string;
 }
 
 const ContactsItem: FC<ContactsItemProps> = ({ text, icon, classTag = "" }) => {

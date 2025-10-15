@@ -2,7 +2,7 @@ import React, { FC, ReactNode } from "react";
 
 interface WalletItemProps {
   text: string;
-  icon: ReactNode; // может быть SVG, компонент, строка, иконка и т.п.
+  icon: ReactNode;
 }
 
 const WalletItem: FC<WalletItemProps> = ({ text, icon }) => {

@@ -24,7 +24,7 @@ const lato = Lato({
 
 const raleway = Raleway({
   subsets: ["latin"],
-  weight: ["400", "700"], // нужные веса
+  weight: ["400", "700"],
   variable: "--font-raleway",
 });
 
