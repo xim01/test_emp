@@ -1,0 +1,46 @@
+.buyFormWrapper {
+  padding-top: 85px;
+}
+
+.buyFormRow,
+.buyFormRow2 {
+  display: flex;
+  gap: 29px;
+  margin-bottom: 26px;
+}
+
+.buyFormButtonWrapper {
+  width: 374px;
+  margin: 0 auto;
+  padding-top: 7px;
+}
+
+.blueButton {
+  color: #fff;
+  background: #3e9cdc;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  width: 372px;
+  height: 48px;
+  padding: 15px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.blueButton:hover {
+  background: #378fe6;
+}
+
+.input {
+  width: 372px;
+  height: 48px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #ffffffd9;
+  font-family: var(--font-lato), sans-serif;
+  font-size: 18px;
+  color: #272733;
+  box-sizing: border-box;
+}

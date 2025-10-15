@@ -1,26 +1,24 @@
 import { useState } from "react";
+import styles from "./Select.module.css";
 
 export default function Select() {
-  const [selectOpen, setSelectOpen] = useState<boolean>(false);
-  const [selectedOption, setSelectedOption] = useState<string>("Выберите тип системы");
+  const [selectOpen, setSelectOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = useState("Выберите тип системы");
 
-  const options: string[] = [
-    "CRM система",
-    "Сайт-визитка",
-    "Интернет-магазин",
-    "Мобильное приложение",
-    "Корпоративный портал",
-  ];
+  const options = ["CRM система", "Сайт-визитка", "Интернет-магазин", "Мобильное приложение", "Корпоративный портал"];
 
   return (
-    <div className="select">
-      <div className={`select_header ${selectOpen ? "open" : ""}`} onClick={() => setSelectOpen(!selectOpen)}>
+    <div className={styles.select}>
+      <div
+        className={`${styles.selectHeader} ${selectOpen ? styles.open : ""}`}
+        onClick={() => setSelectOpen(!selectOpen)}
+      >
         {selectedOption}
-        <span className="select_arrow"></span>
+        <span className={styles.selectArrow}></span>
       </div>
 
       {selectOpen && (
-        <ul className="select_options">
+        <ul className={styles.selectOptions}>
           {options.map((opt, i) => (
             <li
               key={i}

@@ -1,4 +1,5 @@
 import React, { FC, ReactNode } from "react";
+import styles from "./Wallet.module.css";
 
 interface WalletItemProps {
   text: string;
@@ -7,11 +8,11 @@ interface WalletItemProps {
 
 const WalletItem: FC<WalletItemProps> = ({ text, icon }) => {
   return (
-    <div className="wallets_item">
-      <div className="wallets_item_icon">
+    <div className={styles.item}>
+      <div className={styles.icon}>
         <a href="#">{icon}</a>
       </div>
-      <div className="wallets_item_text">
+      <div className={styles.text}>
         <a href="#">{text}</a>
       </div>
     </div>

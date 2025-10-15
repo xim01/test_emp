@@ -1,0 +1,26 @@
+.footer {
+  width: 100%;
+  max-width: 1920px;
+  height: 80px;
+  background-color: #3d4050;
+  display: flex;
+  align-items: center;
+}
+
+.footerItem {
+  border-right: 2px solid #c3c3c3;
+  height: 18px;
+}
+
+.footerItem:last-child {
+  border-right: none;
+}
+
+.copyright {
+  font-family: var(--font-lato), sans-serif;
+  color: #fff;
+  margin-top: 5px;
+  padding: 0 43px 0 376px;
+  font-size: 14px;
+  font-weight: 400;
+}

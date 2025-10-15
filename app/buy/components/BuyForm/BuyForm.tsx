@@ -1,3 +1,4 @@
+import styles from "./BuyForm.module.css";
 import Select from "./components/Select";
 import RangeSlider from "./components/RangeSlider";
 import FileUpload from "./components/FileUpload";
@@ -9,26 +10,23 @@ export default function BuyForm() {
   };
 
   return (
-    <div id="buy_form_wrapper">
+    <div className={styles.buyFormWrapper}>
       <form onSubmit={handleSubmit}>
-        <div className="buy_form_row">
+        <div className={styles.buyFormRow}>
           <Select />
-
-          <input type="email" name="email" placeholder="Ваш e-mail" required />
-          <input type="text" name="name" placeholder="Ваше имя" required />
+          <input type="email" name="email" placeholder="Ваш e-mail" required className={styles.input} />
+          <input type="text" name="name" placeholder="Ваше имя" required className={styles.input} />
         </div>
 
-        <div className="buy_form_row_2">
+        <div className={styles.buyFormRow2}>
           <RangeSlider />
           <FileUpload />
         </div>
 
-        <div className="file_row_center">
-          <div className="buy_form_button_wrapper">
-            <button className="blue_button" type="submit">
-              ОТПРАВИТЬ
-            </button>
-          </div>
+        <div className={styles.buyFormButtonWrapper}>
+          <button className={styles.blueButton} type="submit">
+            ОТПРАВИТЬ
+          </button>
         </div>
       </form>
     </div>

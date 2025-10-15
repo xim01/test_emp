@@ -1,0 +1,33 @@
+.contacts {
+  display: flex;
+  padding-left: 35px;
+}
+
+.item {
+  display: flex;
+  margin-right: 51px;
+}
+
+.icon a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text a {
+  font-family: var(--font-lato), sans-serif;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 4px 0 0 9px;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.text a:hover {
+  color: #3e9cdc;
+}
+
+.vkIcon {
+  margin-top: 4px;
+}

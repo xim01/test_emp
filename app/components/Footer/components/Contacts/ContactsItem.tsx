@@ -1,4 +1,5 @@
 import React, { FC, ReactNode } from "react";
+import styles from "./Contacts.module.css";
 
 interface ContactsItemProps {
   text: string;
@@ -6,13 +7,13 @@ interface ContactsItemProps {
   classTag?: string;
 }
 
-const ContactsItem: FC<ContactsItemProps> = ({ text, icon, classTag = "" }) => {
+const ContactsItem: FC<ContactsItemProps> = ({ text, icon, classTag }) => {
   return (
-    <div className={`contacts_item ${classTag}`}>
-      <div className="contacts_item_icon">
+    <div className={`${styles.item} ${classTag ? styles[classTag] : ""}`}>
+      <div className={styles.icon}>
         <a href="#">{icon}</a>
       </div>
-      <div className="contacts_item_text">
+      <div className={styles.text}>
         <a href="#">{text}</a>
       </div>
     </div>

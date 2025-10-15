@@ -1,8 +1,9 @@
+import styles from "./Wallet.module.css";
 import WalletItems from "./WalletItems";
 
 export default function Wallet() {
   return (
-    <div className="wallets footer_item">
+    <div className={styles.wallets}>
       <WalletItems />
     </div>
   );

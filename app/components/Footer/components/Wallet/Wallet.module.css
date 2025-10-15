@@ -1,0 +1,23 @@
+.wallets {
+  display: flex;
+  padding-left: 40px;
+}
+
+.item {
+  display: flex;
+  margin-right: 43px;
+}
+
+.text a {
+  font-family: var(--font-lato), sans-serif;
+  color: #c3c3c3;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 4px 0 0 9px;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.text a:hover {
+  color: #3e9cdc;
+}

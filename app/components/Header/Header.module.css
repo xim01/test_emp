@@ -1,0 +1,28 @@
+.header {
+  background: url("/images/header.png") center / cover no-repeat;
+  width: 100%;
+  max-width: 1920px;
+  height: 850px;
+  margin: 0 auto;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 100px;
+  width: 100%;
+  background: rgba(16, 16, 29, 0.898);
+}
+
+.logo {
+  position: relative;
+  left: 375px;
+}
+
+.navWrapper {
+  position: relative;
+  top: 1px;
+  right: 376px;
+}

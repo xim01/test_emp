@@ -1,0 +1,70 @@
+.buySteps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-top: 62px;
+}
+
+.stepWrapper {
+  display: flex;
+  align-items: baseline;
+  flex-direction: column;
+}
+
+.stepCircle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95px;
+  height: 95px;
+  margin: 0 auto;
+  color: #fff;
+  background: #3e9cdc;
+  border: 5px solid #286690;
+  border-radius: 100px;
+  font-size: 42px;
+}
+
+.stepText {
+  text-align: center;
+  width: 185px;
+  font-family: var(--font-lato), sans-serif;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.betweenDots {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: -59px -55px 0 -55px;
+}
+
+.dot {
+  display: block;
+  background: #c4c4c4;
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .buySteps {
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 40px;
+  }
+
+  .betweenDots {
+    margin: 0;
+    gap: 5px;
+  }
+
+  .stepText {
+    width: 100%;
+  }
+}
