@@ -5,3 +5,8 @@
   font-size: 28px;
   text-transform: uppercase;
 }
+@media (max-width: 1919px) {
+  #logo_text {
+    font-size: 22px;
+  }
+}

@@ -2,12 +2,19 @@
   display: flex;
   padding-left: 35px;
 }
-
+.contactsM {
+  display: block;
+}
 .item {
   display: flex;
   margin-right: 51px;
 }
-
+.itemM {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 6px 0;
+}
 .icon a {
   display: inline-flex;
   align-items: center;

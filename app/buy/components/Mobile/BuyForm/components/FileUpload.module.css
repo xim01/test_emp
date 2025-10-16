@@ -1,0 +1,38 @@
+.fileRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.fileLabel {
+  color: #272733;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 3px;
+  justify-content: flex-start;
+  align-items: center;
+  width: 262px;
+  height: 27px;
+  margin: 0px 0 0 3px;
+  padding: 13px 11px 7px 93px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.2s;
+  display: flex;
+}
+
+.fileLabel:hover {
+  background: #378fe6;
+}
+
+.fileLabelIcon {
+  margin-right: 9px;
+}
+
+.fileName {
+  color: #272733;
+  font-size: 14px;
+  font-style: italic;
+}

@@ -3,9 +3,17 @@
   padding-left: 40px;
 }
 
+.walletsMobile {
+  margin: 0 auto;
+}
 .item {
   display: flex;
   margin-right: 43px;
+}
+.itemM {
+  display: flex;
+  margin-right: 0;
+  padding: 6px 0;
 }
 
 .text a {

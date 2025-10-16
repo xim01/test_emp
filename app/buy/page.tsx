@@ -1,16 +1,38 @@
 "use client";
-import React, { FC } from "react";
-import BuyText from "./components/BuyText/BuyText";
-import BuySteps from "./components/BuyStep/BuySteps";
-import BuyForm from "./components/BuyForm/BuyForm";
+import React from "react";
 
-const Buy: FC = () => {
+import { useResponsive } from "../components/ResponsiveContext";
+import BuyText from "./components/Desktop/BuyText/BuyText";
+import BuySteps from "./components/Desktop/BuyStep/BuySteps";
+import BuyForm from "./components/Desktop/BuyForm/BuyForm";
+
+import BuyTextM from "./components/Mobile/BuyText/BuyText";
+// import BuyStepsM from "./components/Mobile/BuyStep/BuySteps";
+import BuyFormM from "./components/Mobile/BuyForm/BuyForm";
+
+const Buy: React.FC = () => {
+  const { isDesktop, isMobile, mounted } = useResponsive();
+
+  if (!mounted) return <section id="buy" />;
+
   return (
-    <section id="buy">
-      <BuyText />
-      <BuySteps />
-      <BuyForm />
-    </section>
+    <>
+      {isDesktop && (
+        <section id="buy">
+          <BuyText />
+          <BuySteps />
+          <BuyForm />
+        </section>
+      )}
+
+      {isMobile && (
+        <section id="buy">
+          <BuyTextM />
+          {/* <BuyStepsM /> */}
+          <BuyFormM />
+        </section>
+      )}
+    </>
   );
 };
 

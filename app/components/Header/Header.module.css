@@ -1,28 +1,94 @@
 .header {
-  background: url("/images/header.png") center / cover no-repeat;
-  width: 100%;
-  max-width: 1920px;
-  height: 850px;
+  z-index: 1000;
+  width: 1920px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   margin: 0 auto;
 }
 
 .menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  height: 100px;
-  width: 100%;
   background: rgba(16, 16, 29, 0.898);
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  display: flex;
 }
 
 .logo {
   position: relative;
-  left: 375px;
+  left: 376px;
 }
 
 .navWrapper {
   position: relative;
-  top: 1px;
+  top: 3px;
   right: 376px;
+}
+
+/*mobile*/
+
+/* мобильный хедер */
+.mobileHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: rgba(16, 16, 29, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+/* гамбургер */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1010;
+}
+.hamburger:hover {
+  background-color: unset;
+}
+.bar {
+  display: block;
+  height: 3px;
+  width: 30px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.bar1Open {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.bar2Open {
+  opacity: 0;
+}
+.bar3Open {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* мобильное меню */
+.mobileNavWrapper {
+  position: fixed;
+  top: 80px;
+  right: 0;
+  width: 200px;
+  background: #222;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 1000;
 }

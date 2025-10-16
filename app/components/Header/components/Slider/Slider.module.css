@@ -1,11 +1,12 @@
 .slider {
-  /* контейнер с бэкграундом, если нужно */
+  background: url("/images/header.png") 0 0 / cover no-repeat;
+  width: 1920px;
+  height: 850px;
 }
-
 .content {
-  width: 800px;
-  padding-top: 56px;
-  padding-left: 375px;
+  padding-top: 157px;
+  padding-left: 376px;
+  width: 776px;
 }
 
 .title {
@@ -72,18 +73,20 @@
 }
 
 .whiteBtn {
-  composes: button;
-  background-color: #fff;
   color: #000;
+  background-color: #fff;
   border: 1px solid #6f6d7b;
-  padding: 13px 51px;
+  padding: 0px 47px;
+  border-radius: 3px;
 }
 
 .blueBtn {
-  composes: button;
-  background: #3e9cdc;
   color: #fff;
+  background: #3e9cdc;
   border: 1px solid #fff;
+  padding: 0 56px;
+  border-radius: 3px;
+  height: 44px;
 }
 
 .whiteBtn:hover {

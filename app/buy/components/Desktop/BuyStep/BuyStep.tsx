@@ -65,8 +65,6 @@ const icons = {
       />
     </svg>
   ),
-
-  // ... добавь остальные иконки сюда (money, file, percent, message)
 };
 
 const BuyStep: FC<StepProps> = ({ text, icon }) => {
