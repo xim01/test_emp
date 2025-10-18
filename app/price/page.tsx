@@ -1,3 +1,9 @@
+import TestMock from "../components/TestMock";
+
 export default function Business() {
-  return <p>Price page</p>;
+  return (
+    <>
+      <TestMock page="Price" />
+    </>
+  );
 }

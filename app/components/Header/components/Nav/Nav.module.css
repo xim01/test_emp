@@ -27,7 +27,7 @@
 }
 /* Nav.module.css */
 /* для мобильного меню делаем вертикальный список */
-@media (max-width: 1919px) {
+@media (max-width: 1917px) {
   .ul {
     display: flex;
     flex-direction: column;

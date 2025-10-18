@@ -45,9 +45,24 @@ const webIcon = (
 export default function WalletItems() {
   return (
     <>
-      <WalletItem text={"QIWI wallet"} icon={qiwiIcon} />
-      <WalletItem text={"Yandex Money"} icon={yandexIcon} />
-      <WalletItem text={"Web Money"} icon={webIcon} />
+      <WalletItem
+        text={"QIWI wallet"}
+        icon={qiwiIcon}
+        link="https://qiwi.me/YOUR_USERNAME"
+        title="QIWI — перейти на сайт"
+      />
+      <WalletItem
+        text={"Yandex Money"}
+        icon={yandexIcon}
+        link="https://yoomoney.ru/to/YOUR_ACCOUNT"
+        title="Yandex Money — перейти на сайт"
+      />
+      <WalletItem
+        text={"Web Money"}
+        icon={webIcon}
+        link="https://merchant.webmoney.ru/lmi/payment.asp?wmid=YOUR_WMID"
+        title="WebMoney — перейти на сайт"
+      />
     </>
   );
 }

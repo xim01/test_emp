@@ -1,3 +1,9 @@
+import TestMock from "./components/TestMock";
+
 export default function Home() {
-  return <p>Home page</p>;
+  return (
+    <>
+      <TestMock page="Home" />
+    </>
+  );
 }

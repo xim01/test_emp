@@ -17,8 +17,8 @@ const ResponsiveContext = createContext<ResponsiveContextType>({
 export const ResponsiveProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [mounted, setMounted] = useState(false);
 
-  const isDesktop = useMediaQuery({ minWidth: 1920 });
-  const isMobile = useMediaQuery({ maxWidth: 1919 });
+  const isDesktop = useMediaQuery({ minWidth: 1918 });
+  const isMobile = useMediaQuery({ maxWidth: 1917 });
 
   // После монтирования клиента ставим mounted = true
   useEffect(() => setMounted(true), []);

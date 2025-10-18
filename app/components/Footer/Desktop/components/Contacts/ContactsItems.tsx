@@ -21,8 +21,20 @@ const vkIcon = (
 export default function ContactsItems() {
   return (
     <>
-      <ContactsItem text="info@ipsum228.com" icon={mailIcon} />
-      <ContactsItem text="Мы вконтакте" icon={vkIcon} classTag="vk" />
+      <ContactsItem
+        text="info@ipsum228.com"
+        icon={mailIcon}
+        link="mailto:info@ipsum228.com"
+        title="Написать на info@ipsum228.com"
+        type="mail" //для маила свой блок
+      />
+      <ContactsItem
+        text="Мы вконтакте"
+        icon={vkIcon}
+        classTag="vk" //доп класс для манипуляции конкретного блока
+        link="https://vk.com/your_vk_username"
+        title="Мы ВКонтакте"
+      />
     </>
   );
 }

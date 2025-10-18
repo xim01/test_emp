@@ -116,6 +116,7 @@ h1 {
   line-height: 1.38;
   text-transform: uppercase;
   text-align: center;
+  margin: 0;
 }
 
 p,
@@ -127,7 +128,18 @@ div {
   letter-spacing: 0%;
   vertical-align: middle;
 }
-
+p {
+  padding: 0;
+  margin: 0;
+}
+a.default_link {
+  color: #fff;
+  text-decoration: underline;
+}
+a.default_link:hover {
+  color: #444;
+  transition: all 0.2s;
+}
 /* =========================================================
    LAYOUT STRUCTURE
 ========================================================= */
@@ -149,7 +161,7 @@ main::before {
   position: absolute;
   inset: 0;
   background: url("/images/bg.png") center / cover no-repeat;
-  /* opacity: 0.1; */
+  opacity: 0.1;
   z-index: 0;
 }
 
@@ -158,6 +170,10 @@ main::before {
   margin: 0 auto;
   position: relative;
   z-index: 20;
+  padding: 93px 20px 0 0;
+  text-align: center;
+
+  margin: 0 auto;
 }
 
 /* =========================================================
